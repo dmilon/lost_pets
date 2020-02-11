@@ -1,0 +1,11 @@
+<h1>This is the details for <%= @pet.name %></h1>
+
+<ul>
+  <li>Species: <%= @pet.species %></li>
+  <li>Address: <%= @pet.address %></li>
+  <li>Found on: <%= @pet.found_on %></li>
+</ul>
+
+<%= link_to "Delete #{@pet.name}", pet_path(@pet), method: :delete, data: { confirm: "Are you sure?"} %>
+<%= link_to "Back to all pets", pets_path do %>
+<%= link_to "Edit #{@pet.name}", edit_pet_path(@pet) %>
